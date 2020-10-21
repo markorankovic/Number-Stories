@@ -1,13 +1,13 @@
-public enum GameState: Equatable {
-    case launched
-    case mainMenu
-    case loading
-    case playing(PlayingState)
-}
-
-public enum PlayingState {
-    case paused
-    case userInteraction
-    case cutscene
-    case handingRewards
+public class GameState: GameStateProtocol {
+    public init() { }
+    
+    func enter(state: GameStateProtocol) {
+        
+    }
+    func onEntry(from: GameStateProtocol?) {
+        
+    }
+    func onExit(to: GameStateProtocol?) {
+        
+    }
 }

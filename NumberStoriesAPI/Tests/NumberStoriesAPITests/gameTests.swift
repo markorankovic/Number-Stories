@@ -2,13 +2,13 @@ final class GameTests: Hopes {
     
     func test_game_launch_success() {
         let game = Game()
-        hope(game.gameState) == .launched
+        XCTAssert(game.stateMachine.currentState is LaunchedState)
     }
     
     func test_game_launch_failure() {
-        var game = Game()
-        game.gameState = .mainMenu
-        hope(game.gameState) != .launched
+        let game = Game()
+        game.stateMachine.enter(state: MainMenuState())
+        XCTAssertFalse(game.stateMachine.currentState is LaunchedState)
     }
-    
+        
 }

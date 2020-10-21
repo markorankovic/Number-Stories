@@ -1,4 +1,4 @@
 protocol GameStateProtocol {
-    func onEntry(from: GameStateProtocol?)
-    func onExit(to: GameStateProtocol?)
+    func onEntry(from: GameState?)
+    func onExit(to: GameState?)
 }

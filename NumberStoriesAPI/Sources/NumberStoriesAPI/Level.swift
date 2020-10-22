@@ -1,1 +1,5 @@
-struct Level {}
+public struct Level {
+    
+    public init() { }
+    
+}

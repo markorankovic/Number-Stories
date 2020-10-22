@@ -1,5 +1,5 @@
-public class StateMachine: StateMachineProtocol {
-    public private(set) var currentState: GameState = UnknownState() {
+public class StateMachine: ObservableObject, StateMachineProtocol {
+    @Published public private(set) var currentState: GameState = UnknownState() {
         didSet {
             currentState.onEntry(from: oldValue)
             print("State transitions from \(oldValue) to \(currentState)")

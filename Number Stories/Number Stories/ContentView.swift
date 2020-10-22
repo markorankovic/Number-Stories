@@ -2,15 +2,15 @@ import SwiftUI
 import SpriteKit
 
 struct ContentView: View {
-    let scene = GameScene(fileNamed: "GameScene.sks")!
+    @ObservedObject var game: Game
+        
     var body: some View {
-        SpriteView(scene: scene)
-            .ignoresSafeArea()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+        if game.stateMachine.currentState is MainMenuState {
+            MainMenuView(game: game)
+        } else if game.stateMachine.currentState is PlayingState {
+            GameView(game: game)
+        } else {
+            ProgressView()
+        }
     }
 }

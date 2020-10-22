@@ -1,9 +1,16 @@
-public struct Game: GameProtocol {
-    public init() {}
+import SwiftUI
+public class Game: ObservableObject, GameProtocol {
     
-    public var stateMachine = StateMachine(initialState: LaunchedState())
+    public init() { }
+    
+    @ObservedObject public var stateMachine = StateMachine(initialState: LaunchedState()) {
+        willSet {
+            print(20)
+        }
+    }
     
     func goToMainMenu() {
+        stateMachine.enter(state: MainMenuState())
         print("Went to main menu.")
     }
     
@@ -23,7 +30,8 @@ public struct Game: GameProtocol {
         print("Initiated marble repulsion.")
     }
     
-    func startLevel(level: Level) {
+    public func startLevel(level: Level) {
+        stateMachine.enter(state: PlayingState(stateMachine: stateMachine))
         print("Started level \(level).")
     }
     

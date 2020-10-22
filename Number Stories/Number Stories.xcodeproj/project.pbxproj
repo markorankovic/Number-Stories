@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD984B5F2541DB82007D641D /* NumberStoriesAPI in Frameworks */ = {isa = PBXBuildFile; productRef = AD984B5E2541DB82007D641D /* NumberStoriesAPI */; };
+		AD984B642541DDA9007D641D /* imports.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD984B632541DDA9007D641D /* imports.swift */; };
 		ADA2BABC253F35D900C4FB6D /* Number_StoriesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2BABB253F35D900C4FB6D /* Number_StoriesApp.swift */; };
 		ADA2BABE253F35D900C4FB6D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2BABD253F35D900C4FB6D /* ContentView.swift */; };
 		ADA2BAC0253F35D900C4FB6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA2BABF253F35D900C4FB6D /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 		ADA2BAD9253F35DA00C4FB6D /* Number_StoriesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2BAD8253F35DA00C4FB6D /* Number_StoriesUITests.swift */; };
 		ADA2BAEB253F362F00C4FB6D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2BAE9253F362F00C4FB6D /* GameScene.swift */; };
 		ADA2BAEC253F362F00C4FB6D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = ADA2BAEA253F362F00C4FB6D /* GameScene.sks */; };
+		ADBD7E512541F2E300C79F36 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBD7E502541F2E300C79F36 /* GameView.swift */; };
+		ADBD7E562541F8CD00C79F36 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBD7E552541F8CD00C79F36 /* MainMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD984B632541DDA9007D641D /* imports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imports.swift; sourceTree = "<group>"; };
 		ADA2BAB8253F35D900C4FB6D /* Number Stories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Number Stories.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA2BABB253F35D900C4FB6D /* Number_StoriesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number_StoriesApp.swift; sourceTree = "<group>"; };
 		ADA2BABD253F35D900C4FB6D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +54,8 @@
 		ADA2BADA253F35DA00C4FB6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADA2BAE9253F362F00C4FB6D /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		ADA2BAEA253F362F00C4FB6D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		ADBD7E502541F2E300C79F36 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		ADBD7E552541F8CD00C79F36 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD984B5F2541DB82007D641D /* NumberStoriesAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +84,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD984B5D2541DB82007D641D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ADA2BAAF253F35D900C4FB6D = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +98,7 @@
 				ADA2BACC253F35DA00C4FB6D /* Number StoriesTests */,
 				ADA2BAD7253F35DA00C4FB6D /* Number StoriesUITests */,
 				ADA2BAB9253F35D900C4FB6D /* Products */,
+				AD984B5D2541DB82007D641D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +122,9 @@
 				ADA2BABF253F35D900C4FB6D /* Assets.xcassets */,
 				ADA2BAC4253F35D900C4FB6D /* Info.plist */,
 				ADA2BAC1253F35D900C4FB6D /* Preview Content */,
+				AD984B632541DDA9007D641D /* imports.swift */,
+				ADBD7E502541F2E300C79F36 /* GameView.swift */,
+				ADBD7E552541F8CD00C79F36 /* MainMenuView.swift */,
 			);
 			path = "Number Stories";
 			sourceTree = "<group>";
@@ -152,6 +171,9 @@
 			dependencies = (
 			);
 			name = "Number Stories";
+			packageProductDependencies = (
+				AD984B5E2541DB82007D641D /* NumberStoriesAPI */,
+			);
 			productName = "Number Stories";
 			productReference = ADA2BAB8253F35D900C4FB6D /* Number Stories.app */;
 			productType = "com.apple.product-type.application";
@@ -266,9 +288,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADBD7E562541F8CD00C79F36 /* MainMenuView.swift in Sources */,
 				ADA2BAEB253F362F00C4FB6D /* GameScene.swift in Sources */,
 				ADA2BABE253F35D900C4FB6D /* ContentView.swift in Sources */,
+				AD984B642541DDA9007D641D /* imports.swift in Sources */,
 				ADA2BABC253F35D900C4FB6D /* Number_StoriesApp.swift in Sources */,
+				ADBD7E512541F2E300C79F36 /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +613,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AD984B5E2541DB82007D641D /* NumberStoriesAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NumberStoriesAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ADA2BAB0253F35D900C4FB6D /* Project object */;
 }

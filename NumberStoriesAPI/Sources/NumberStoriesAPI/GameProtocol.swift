@@ -6,7 +6,7 @@ protocol GameProtocol {
     func initiatePullFields()
     func initiateMarbleRepulsion()
     
-    func startLevel(n: Int)
+    func startLevel(level: Level)
     func nextLevel()
     func quit()
     

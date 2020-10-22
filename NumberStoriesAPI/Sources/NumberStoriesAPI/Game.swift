@@ -23,8 +23,8 @@ public struct Game: GameProtocol {
         print("Initiated marble repulsion.")
     }
     
-    func startLevel(n: Int) {
-        print("Started level \(n).")
+    func startLevel(level: Level) {
+        print("Started level \(level).")
     }
     
     func nextLevel() {
@@ -54,6 +54,5 @@ public struct Game: GameProtocol {
     func togglePhysics(on: Bool) {
         print("Toggled physics to \(on).")
     }
-    
     
 }

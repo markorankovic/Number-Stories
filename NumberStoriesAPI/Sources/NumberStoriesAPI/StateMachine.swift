@@ -1,5 +1,5 @@
-public class StateMachine: ObservableObject, StateMachineProtocol {
-    @Published public private(set) var currentState: GameState = UnknownState() {
+public struct StateMachine: StateMachineProtocol {    
+    public private(set) var currentState: GameState = UnknownState() {
         didSet {
             currentState.onEntry(from: oldValue)
             print("State transitions from \(oldValue) to \(currentState)")
@@ -14,7 +14,7 @@ public class StateMachine: ObservableObject, StateMachineProtocol {
         enter(state: initialState)
     }
     
-    public func enter(state: GameState) {
+    public mutating func enter(state: GameState) {
         currentState = state
     }
 }

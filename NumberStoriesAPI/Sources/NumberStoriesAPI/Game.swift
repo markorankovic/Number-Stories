@@ -3,7 +3,7 @@ public class Game: ObservableObject, GameProtocol {
     
     public init() { }
     
-    @ObservedObject public var stateMachine = StateMachine(initialState: LaunchedState()) {
+    @Published public var stateMachine = StateMachine(initialState: LaunchedState()) {
         willSet {
             print(20)
         }

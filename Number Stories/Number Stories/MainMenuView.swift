@@ -1,9 +1,6 @@
 struct MainMenuView: View {
-    @ObservedObject var game: Game {
-        willSet {
-            print(10)
-        }
-    }
+    @ObservedObject var game: Game
+    
     var body: some View {
         Text("Number Stories")
         Button("Play") {

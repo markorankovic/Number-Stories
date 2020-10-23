@@ -1,3 +1,3 @@
 protocol StateMachineProtocol {
-    func enter(state: GameState)
+    mutating func enter(state: GameState)
 }

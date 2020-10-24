@@ -3,10 +3,15 @@ public class Game: ObservableObject, GameProtocol {
     
     public init() { }
     
-    @Published public var stateMachine = StateMachine(initialState: LaunchedState()) {
-        willSet {
-            print(20)
-        }
+    public let stateMachine = StateMachine(initialState: LaunchedState())
+    
+    public var currentState: GameState {
+        stateMachine.currentState
+    }
+    
+    public func enter(state: GameState) {
+        stateMachine.enter(state: state)
+        objectWillChange.send()
     }
     
     func goToMainMenu() {
@@ -31,7 +36,7 @@ public class Game: ObservableObject, GameProtocol {
     }
     
     public func startLevel(level: Level) {
-        stateMachine.enter(state: PlayingState(stateMachine: stateMachine))
+        enter(state: PlayingState(game: self))
         print("Started level \(level).")
     }
     

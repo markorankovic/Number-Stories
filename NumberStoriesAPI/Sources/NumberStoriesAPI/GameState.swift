@@ -1,12 +1,12 @@
 public class GameState: GameStateProtocol {
     
-    var stateMachine: StateMachine?
+    var game: Game?
     
     public init() { }
     
-    public convenience init(stateMachine: StateMachine) {
+    public convenience init(game: Game) {
         self.init()
-        self.stateMachine = stateMachine
+        self.game = game
     }
     
     func enter(state: GameState) {
@@ -18,4 +18,12 @@ public class GameState: GameStateProtocol {
     func onExit(to: GameState?) {
         
     }
+    public func touchesMoved(_ touches: Set<UITouch>, _ scene: SKScene) {
+        
+    }
+    
+    public func onUpdate(timeInterval: TimeInterval, scene: SKScene) {
+        
+    }
+    
 }

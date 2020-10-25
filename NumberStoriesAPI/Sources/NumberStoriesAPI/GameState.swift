@@ -18,7 +18,12 @@ public class GameState: GameStateProtocol {
     func onExit(to: GameState?) {
         
     }
+    
     public func touchesMoved(_ touches: Set<UITouch>, _ scene: SKScene) {
+        
+    }
+    
+    public func touchesEnded(_ touches: Set<UITouch>, _ scene: SKScene) {
         
     }
     

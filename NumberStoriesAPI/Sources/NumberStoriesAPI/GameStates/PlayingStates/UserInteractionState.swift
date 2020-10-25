@@ -34,8 +34,13 @@ public class UserInteractionState: PlayingState {
         print("___________________________________")
     }
     
-    public override func onUpdate(timeInterval: TimeInterval, scene: SKScene) {
-        //print(1)
+    public override func touchesEnded(_ touches: Set<UITouch>, _ scene: SKScene) {
+        for touch in touches {
+            let draggableNodes = scene.nodes(at: touch.location(in: scene)).compactMap({ $0 as? DraggableNode })
+            if let draggableNode = draggableNodes.first {
+                draggableNode.togglePhysics(on: true)
+            }
+        }
     }
-
+    
 }

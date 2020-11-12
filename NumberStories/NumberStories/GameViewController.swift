@@ -19,7 +19,7 @@ extension SKView {
 }
 
 class GameViewController: UIViewController {
-        
+    
     var gameView: SKView { return view as! SKView }
 
     override var prefersStatusBarHidden: Bool { return true }

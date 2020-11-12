@@ -63,11 +63,11 @@
 		71A015931FD3146D0022AE09 /* media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71A015921FD3146D0022AE09 /* media.xcassets */; };
 		71A015971FD3153D0022AE09 /* Beads.sks in Resources */ = {isa = PBXBuildFile; fileRef = 71A015941FD3153D0022AE09 /* Beads.sks */; };
 		71A015981FD3153D0022AE09 /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 71A015951FD3153D0022AE09 /* MenuScene.sks */; };
-		71A015991FD3153D0022AE09 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 71A015961FD3153D0022AE09 /* GameScene.sks */; };
 		71A0159C1FD316BA0022AE09 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A0159B1FD316BA0022AE09 /* MenuScene.swift */; };
 		71A0159E1FD332930022AE09 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A0159D1FD332930022AE09 /* Game.swift */; };
 		71A015A01FD332ED0022AE09 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A0159F1FD332ED0022AE09 /* Extensions.swift */; };
 		71A015A21FD3376F0022AE09 /* Beads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A015A11FD3376F0022AE09 /* Beads.swift */; };
+		AD468C46255D660F00F13125 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = AD468C45255D660F00F13125 /* GameScene.sks */; };
 		ADB3275A25473CC300E11EF1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB3275925473CC300E11EF1 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -141,11 +141,11 @@
 		71A015921FD3146D0022AE09 /* media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = media.xcassets; sourceTree = "<group>"; };
 		71A015941FD3153D0022AE09 /* Beads.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Beads.sks; sourceTree = "<group>"; };
 		71A015951FD3153D0022AE09 /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
-		71A015961FD3153D0022AE09 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		71A0159B1FD316BA0022AE09 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		71A0159D1FD332930022AE09 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		71A0159F1FD332ED0022AE09 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		71A015A11FD3376F0022AE09 /* Beads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beads.swift; sourceTree = "<group>"; };
+		AD468C45255D660F00F13125 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		ADB3275925473CC300E11EF1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -263,8 +263,8 @@
 		71A0159A1FD315490022AE09 /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				AD468C45255D660F00F13125 /* GameScene.sks */,
 				71A015941FD3153D0022AE09 /* Beads.sks */,
-				71A015961FD3153D0022AE09 /* GameScene.sks */,
 				71A015951FD3153D0022AE09 /* MenuScene.sks */,
 			);
 			path = scenes;
@@ -390,8 +390,8 @@
 				71A015731FD314130022AE09 /* Apple_Bite-Simon_Craggs-1683647397.mp3 in Resources */,
 				71A0157B1FD314130022AE09 /* left-7.caf in Resources */,
 				71A015791FD314130022AE09 /* left-6.caf in Resources */,
+				AD468C46255D660F00F13125 /* GameScene.sks in Resources */,
 				71A015671FD314130022AE09 /* sum-4.caf in Resources */,
-				71A015991FD3153D0022AE09 /* GameScene.sks in Resources */,
 				71A015841FD314130022AE09 /* sum-8.caf in Resources */,
 				71A015781FD314130022AE09 /* drag.caf in Resources */,
 				71A015931FD3146D0022AE09 /* media.xcassets in Resources */,

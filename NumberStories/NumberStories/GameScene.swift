@@ -52,6 +52,7 @@ class GameScene: SKScene {
     var rewardButton: SKLabelNode? { return childNode(withName: "RewardButton") as? SKLabelNode }
     var menuButton: SKLabelNode? { return childNode(withName: "MenuButton") as? SKLabelNode }
     var soundButton: SKLabelNode? { return childNode(withName: "SoundButton") as? SKLabelNode }
+    var background: SKSpriteNode? { return childNode(withName: "Background") as? SKSpriteNode }
     
     let MarbleRadius: CGFloat = 88
     var MarbleMinY: CGFloat { return -size.height / 2 + MarbleRadius / 2 }
@@ -71,16 +72,22 @@ class GameScene: SKScene {
     let RewardChars = "🍯 🍎 🍏 🍊 🍋 🍒 🍇 🍉 🍓 🍑 🍈 🍌 🍐 🍍 🍠 🍆 🍅 🌽".components(separatedBy: " ")
     
     override func didMove(to view: SKView) {
-        scaleMode = .fill
+        //scaleMode = .aspectFill
         adjustScene()
         adjustCounters()
         adjustAttractors()
         adjustMarbles()
+        //adjustMenuButton()
         newTask()
     }
     
+    func adjustMenuButton() {
+        let width: CGFloat = size.height * view!.bounds.width / view!.bounds.height
+        menuButton!.position.x = -width/2 + menuButton!.fontSize
+    }
+    
     func adjustScene() {
-        let rect = CGRect(x: -Padding, y: -size.height / 2, width: 2 * Padding, height: Padding)
+        let rect = CGRect(x: -Padding, y: -size.height / 2 + 20, width: 2 * Padding, height: Padding)
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: rect)
     }
     
@@ -301,18 +308,18 @@ class GameScene: SKScene {
         for counter in counters {
             
             counter.removeAllActions()
-            counter.run(
-                .sequence(
-                    .fadeAlpha(to: 0, duration: Dur),
-                    .wait(forDuration: Dur * 11),
-                    .fadeAlpha(to: CounterAlpha, duration: Dur)
-                )
-            )
+//            counter.run(
+//                .sequence(
+//                    .fadeAlpha(to: 0, duration: Dur),
+//                    .wait(forDuration: Dur * 11),
+//                    .fadeAlpha(to: CounterAlpha, duration: Dur)
+//                )
+//            )
             
             let node = copySprite(counter)
             
             switch node.name {
-                
+            
             case "CounterLeft"?:
                 node.name = "TaskTermLeft"
                 highlight(node, color: SKColor(hue: 0.05, saturation: 1, brightness: 1, alpha: 0.85))

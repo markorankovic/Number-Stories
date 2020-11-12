@@ -54,7 +54,7 @@ class GameScene: SKScene {
     var menuButton: SKLabelNode? { return childNode(withName: "MenuButton") as? SKLabelNode }
     var soundButton: SKLabelNode? { return childNode(withName: "SoundButton") as? SKLabelNode }
     
-    let MarbleRadius: CGFloat = 88
+    let MarbleRadius: CGFloat = 110
     var MarbleMinY: CGFloat { return -size.height / 2 + MarbleRadius / 2 }
     let Padding: CGFloat = 1100
     let TrayHeight: CGFloat = 100

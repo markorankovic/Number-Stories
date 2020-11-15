@@ -23,7 +23,11 @@ class GameViewController: UIViewController {
     var gameView: SKView { return view as! SKView }
 
     override var prefersStatusBarHidden: Bool { return true }
-        
+    
+    override var preferredScreenEdgesDeferringSystemGestures: UIRectEdge {
+        return UIRectEdge.bottom
+    }
+
     override func viewDidLoad() {
         gameView.ignoresSiblingOrder = true
         if let scene = SKScene(fileNamed: "MenuScene") {

@@ -13,7 +13,7 @@ var DidNotSayWelcomeMessageYet = true
 class MenuScene: SKScene {
     
     override func didMove(to: SKView) {
-                
+        
         func makeTouchAreasInvisible() {
             for node in children where node.name?.hasPrefix("touchArea") ?? false {
                 node.alpha = 0.01
@@ -34,7 +34,6 @@ class MenuScene: SKScene {
                 .playSoundFileNamed("chose.caf", waitForCompletion: true)
             ]
             run(.sequence(sequence))
-            print(sequence)
         }
         
         makeTouchAreasInvisible()

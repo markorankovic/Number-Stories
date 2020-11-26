@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Slider",
+        "repositoryURL": "https://github.com/markorankovic/Slider.git",
+        "state": {
+          "branch": "main",
+          "revision": "32e743b273273d12790b89aba0e68316960f1ec0",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

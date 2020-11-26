@@ -67,7 +67,9 @@
 		71A0159E1FD332930022AE09 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A0159D1FD332930022AE09 /* Game.swift */; };
 		71A015A01FD332ED0022AE09 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A0159F1FD332ED0022AE09 /* Extensions.swift */; };
 		71A015A21FD3376F0022AE09 /* Beads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A015A11FD3376F0022AE09 /* Beads.swift */; };
+		AD0156BB2564725E00A81E59 /* Slider in Frameworks */ = {isa = PBXBuildFile; productRef = AD0156BA2564725E00A81E59 /* Slider */; };
 		AD468C46255D660F00F13125 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = AD468C45255D660F00F13125 /* GameScene.sks */; };
+		AD48BE76256C266C0016CE19 /* SliderExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD48BE75256C266C0016CE19 /* SliderExt.swift */; };
 		ADA3DCD02560C0EB00194694 /* NewTaskExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA3DCCF2560C0EB00194694 /* NewTaskExt.swift */; };
 		ADA3DCD62560C16B00194694 /* GiveRewardExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA3DCD52560C16B00194694 /* GiveRewardExt.swift */; };
 		ADA3DCDC2560C1BF00194694 /* AdjustExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA3DCDB2560C1BF00194694 /* AdjustExt.swift */; };
@@ -151,6 +153,7 @@
 		71A0159F1FD332ED0022AE09 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		71A015A11FD3376F0022AE09 /* Beads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beads.swift; sourceTree = "<group>"; };
 		AD468C45255D660F00F13125 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		AD48BE75256C266C0016CE19 /* SliderExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderExt.swift; sourceTree = "<group>"; };
 		ADA3DCCF2560C0EB00194694 /* NewTaskExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskExt.swift; sourceTree = "<group>"; };
 		ADA3DCD52560C16B00194694 /* GiveRewardExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveRewardExt.swift; sourceTree = "<group>"; };
 		ADA3DCDB2560C1BF00194694 /* AdjustExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustExt.swift; sourceTree = "<group>"; };
@@ -164,6 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD0156BB2564725E00A81E59 /* Slider in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +186,7 @@
 			children = (
 				71A015011FD30DF50022AE09 /* NumberStories */,
 				71A015001FD30DF50022AE09 /* Products */,
+				AD0156B92564725E00A81E59 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -280,6 +285,13 @@
 			path = scenes;
 			sourceTree = "<group>";
 		};
+		AD0156B92564725E00A81E59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ADA3DCE32560C28400194694 /* GameScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +301,7 @@
 				ADA3DCD52560C16B00194694 /* GiveRewardExt.swift */,
 				ADA3DCCF2560C0EB00194694 /* NewTaskExt.swift */,
 				ADA3DCEC2560C34800194694 /* UpdatesExt.swift */,
+				AD48BE75256C266C0016CE19 /* SliderExt.swift */,
 			);
 			path = GameScene;
 			sourceTree = "<group>";
@@ -309,6 +322,9 @@
 			dependencies = (
 			);
 			name = NumberStories;
+			packageProductDependencies = (
+				AD0156BA2564725E00A81E59 /* Slider */,
+			);
 			productName = NumberStories;
 			productReference = 71A014FF1FD30DF50022AE09 /* NumberStories.app */;
 			productType = "com.apple.product-type.application";
@@ -362,6 +378,8 @@
 				Base,
 			);
 			mainGroup = 71A014F61FD30DF50022AE09;
+			packageReferences = (
+			);
 			productRefGroup = 71A015001FD30DF50022AE09 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -457,6 +475,7 @@
 				ADA3DCE02560C20300194694 /* TouchesExt.swift in Sources */,
 				71A015031FD30DF50022AE09 /* AppDelegate.swift in Sources */,
 				71A015A21FD3376F0022AE09 /* Beads.swift in Sources */,
+				AD48BE76256C266C0016CE19 /* SliderExt.swift in Sources */,
 				ADA3DCD62560C16B00194694 /* GiveRewardExt.swift in Sources */,
 				ADA3DCDC2560C1BF00194694 /* AdjustExt.swift in Sources */,
 				ADA3DCED2560C34800194694 /* UpdatesExt.swift in Sources */,
@@ -724,6 +743,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AD0156BA2564725E00A81E59 /* Slider */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Slider;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 71A014F71FD30DF50022AE09 /* Project object */;
 }

@@ -1,5 +1,6 @@
 import SpriteKit
 import QuartzCore.CoreAnimation
+import Combine
 
 var DidNotSayDragTheMarblesMessageYet = true
 
@@ -30,11 +31,14 @@ class GameScene: SKScene {
     var rewardButton: SKLabelNode? { return childNode(withName: "RewardButton") as? SKLabelNode }
     var menuButton: SKLabelNode? { return childNode(withName: "MenuButton") as? SKLabelNode }
     var soundButton: SKLabelNode? { return childNode(withName: "SoundButton") as? SKLabelNode }
-    
-    let MarbleRadius: CGFloat = 110
+    let swipeBarHeight: CGFloat = 20
+    var MarbleRadius: CGFloat {
+        let width = size.height * view!.bounds.width / view!.bounds.height
+        return width / 10 / 3.1
+    }
     var MarbleMinY: CGFloat { return -size.height / 2 + MarbleRadius / 2 }
     let Padding: CGFloat = 1100
-    let TrayHeight: CGFloat = 100
+    var TrayHeight: CGFloat { return size.height / 4 }
     var TaskTermsHeight: CGFloat { return menuButton?.position.y ?? 327.268 }
     var TrayTop: CGFloat { return -size.height / 2 + TrayHeight }
     
@@ -42,12 +46,20 @@ class GameScene: SKScene {
     let CounterAlpha: CGFloat = 0.1
     let TaskTermAlpha: CGFloat = 0.85
     let TaskTermScale: CGFloat = 0.2
-    let TaskTermSep: CGFloat = 20 //
+    let TaskTermSep: CGFloat = 20
     let TaskOperatorScale: CGFloat = 0.4
     let Dur: TimeInterval = 1
     
     let RewardChars = "🍯 🍎 🍏 🍊 🍋 🍒 🍇 🍉 🍓 🍑 🍈 🍌 🍐 🍍 🍠 🍆 🍅 🌽".components(separatedBy: " ")
     
+    var bag: [Cancellable] = []
+    
+    var s: CGFloat = 0
+    var rF: CGFloat = 0
+    var aS: CGFloat = 0
+    var falloff: CGFloat = 2
+    var minRadius = 147
+
     override func didMove(to view: SKView) {
         scaleMode = .aspectFill
         adjustScene()
@@ -57,8 +69,9 @@ class GameScene: SKScene {
         adjustMenuButton()
         adjustBackground()
         newTask()
+        //addSliders()
     }
-        
+    
     func copySprite(_ node: SKSpriteNode) -> SKSpriteNode {
         let c = node.copy() as! SKSpriteNode
         c.removeAllActions()
@@ -89,7 +102,7 @@ class GameScene: SKScene {
     func switchOffMarbleRepulsion(for marbles: [SKNode]) {
         for marble in marbles {
             guard
-                let repulsion = marble.childNode(withName: "repulsion") as? SKFieldNode,
+                let repulsion = marble.childNode(withName: "RepulsionField") as? SKFieldNode,
                 repulsion.strength != 0
                 else { return }
             

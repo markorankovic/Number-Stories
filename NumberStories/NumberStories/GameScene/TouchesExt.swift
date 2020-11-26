@@ -2,8 +2,13 @@ import SpriteKit
 
 extension GameScene {
     
+//    func evaluateMarbleSize(_ touches: Set<UITouch>) {
+//        let loc = touches.first!.location(in: self)
+//        MarbleRadius += loc.x > 0 ? 10 : -10
+//    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+//        evaluateMarbleSize(touches)
         guard
             let node = (touches.first?.location(in: self)).map(atPoint),
             let name = node.name
@@ -45,9 +50,9 @@ extension GameScene {
                 dy: location.y - prevLocation.y
             )
             node.position.x += translation.dx
-            print("x:\(node.position.x)")
+            //print("x:\(node.position.x)")
             node.position.y = max(MarbleMinY, node.position.y + translation.dy)
-            print("y:\(node.position.y)")
+            //print("y:\(node.position.y)")
         }
     }
     

@@ -89,7 +89,7 @@ extension GameScene {
                     let repulsion = marble.childNode(withName: "RepulsionField") as? SKFieldNode,
                     repulsion.strength != marbleStrength
                     else { continue }
-                
+
                 repulsion.strength = marbleStrength
             }
         }

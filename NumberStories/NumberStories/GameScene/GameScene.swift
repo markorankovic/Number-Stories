@@ -34,11 +34,11 @@ class GameScene: SKScene {
     let swipeBarHeight: CGFloat = 20
     var MarbleRadius: CGFloat {
         let width = size.height * view!.bounds.width / view!.bounds.height
-        return width / 10 / 3.1
+        return width / 10 / 2.95
     }
     var MarbleMinY: CGFloat { return -size.height / 2 + MarbleRadius / 2 }
     let Padding: CGFloat = 1100
-    var TrayHeight: CGFloat { return size.height / 4 }
+    var TrayHeight: CGFloat { return size.height / 3.9 }
     var TaskTermsHeight: CGFloat { return menuButton?.position.y ?? 327.268 }
     var TrayTop: CGFloat { return -size.height / 2 + TrayHeight }
     
